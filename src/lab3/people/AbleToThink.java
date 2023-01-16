@@ -1,5 +1,7 @@
 package lab3.people;
 
 interface AbleToThink {
-    public void thinkAbout(String s);
+    default void thinkAbout(String s) {
+
+    }
 }
