@@ -8,13 +8,11 @@ public class SecondMemory implements AbleToBegin{
     public SecondMemory(String name) {
         this.name = name;
     }
-    Student student = new Student("Студент", "",0.0);
-    Vasilisa vasilisa = new Vasilisa("Василиса", "");
-    DaughterOfVasilisa daughterOfVasilisa = new DaughterOfVasilisa("Дочь Василисы", "");
+    Student student = new Student("Студент", "ready",0.0);
+    Vasilisa vasilisa = new Vasilisa("Василиса", "ready");
 
-    public void memoryBegins(String studentStatus, String vasilisaStatus) {
-        String s = "ready";
-        if (s.equals(studentStatus) && s.equals(vasilisaStatus)) {
+    public void memoryBegins(Object otherStudent, Object otherVasilisa) {
+        if (student.equals(otherStudent) && vasilisa.equals(otherVasilisa)) {
             System.out.println(name + " начинается");
         }
         else {
@@ -22,8 +20,8 @@ public class SecondMemory implements AbleToBegin{
         }
     }
     public void memoryTwoPartOne() {
-        student.thinkAbout(vasilisa.getName() + " и " + daughterOfVasilisa.getName());
-        daughterOfVasilisa.getEmbarrassed();
+        student.thinkAbout(vasilisa.getName() + " и " + Vasilisa.DaughterOfVasilisa.getName());
+        Vasilisa.DaughterOfVasilisa.getEmbarrassed();
         String reason = student.tell(" рассказал о происходившем 19 веков назад");
         vasilisa.cryForTheReason(reason);
         int delay = 1000;
@@ -36,7 +34,7 @@ public class SecondMemory implements AbleToBegin{
             student.studentConviction();
             Thread.sleep(delay);
             delay += 500;
-            student.seeTheConnectionBetween(storyOfStudent, vasilisa.getName() + " и " + daughterOfVasilisa.getName());
+            student.seeTheConnectionBetween(storyOfStudent, vasilisa.getName() + " и " + Vasilisa.DaughterOfVasilisa.getName());
             student.studentConviction();
             Thread.sleep(delay);
             delay += 500;

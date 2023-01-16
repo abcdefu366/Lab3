@@ -121,6 +121,13 @@ public class Student extends Person implements AbleToThink {
         return value;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Student)) return false;
+        Student other = (Student) obj;
+        return other.status == status;
+    }
+
     public String understandThat() {
         return getName() + " понимает, что ";
     }

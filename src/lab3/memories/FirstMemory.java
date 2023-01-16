@@ -7,11 +7,10 @@ public class FirstMemory implements AbleToBegin{
     public FirstMemory(String name) {
         this.name = name;
     }
-    Student student = new Student("Студент", "");
-    Vasilisa vasilisa = new Vasilisa("Василиса", "");
-    public void memoryBegins(String studentStatus, String vasilisaStatus) {
-        String s = "ready";
-        if (s.equals(studentStatus) && s.equals(vasilisaStatus)) {
+    Student student = new Student("Студент", "ready");
+    Vasilisa vasilisa = new Vasilisa("Василиса", "ready");
+    public void memoryBegins(Object otherStudent, Object otherVasilisa) {
+        if (student.equals(otherStudent) && vasilisa.equals(otherVasilisa)) {
             System.out.println(name + " начинается");
         }
         else {
@@ -37,10 +36,5 @@ public class FirstMemory implements AbleToBegin{
         student.setStatus("");
         System.out.println(name + " закончилось");
         System.out.println();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
     }
 }

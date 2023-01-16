@@ -5,6 +5,16 @@ import classes.Character;
 public class Vasilisa extends Character {
     private String status;
 
+    public static class DaughterOfVasilisa {
+        private static String name = "Дочь Василисы";
+        public static String getName() {
+            return name;
+        }
+        public static void getEmbarrassed() {
+            String s = " смутилась и ";
+            System.out.print(getName() + s);
+        }
+    }
     public void setStatus(String status) {
         this.status = status;
     }
@@ -27,6 +37,12 @@ public class Vasilisa extends Character {
         status = getName() + " готова быть вспоминаемой " + student.getName();
         System.out.println(status);
         setStatus("ready");
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Vasilisa)) return false;
+        Vasilisa other = (Vasilisa) obj;
+        return other.status == status;
     }
     public void cryForTheReason(String s) {
         System.out.println(getName() + " плакала из-за того, что: " + s);

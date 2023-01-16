@@ -37,7 +37,7 @@ public class Program {
 
         student.readyForFirstMemory(wind.getIsOccured(), winter.getIsOccured(), darkness.getIsOccured());
         vasilisa.readyToBeRemembered();
-        firstMemory.memoryBegins(student.getStatus(), vasilisa.getStatus());
+        firstMemory.memoryBegins(student, vasilisa);
         firstMemory.memoryOne();
 
         student.lockedBack();
@@ -46,7 +46,7 @@ public class Program {
 
         student.readyForSecondMemory(fire.getIsOccured(), fire.getStatus());
         vasilisa.readyToBeRemembered();
-        secondMemory.memoryBegins(student.getStatus(), vasilisa.getStatus());
+        secondMemory.memoryBegins(student, vasilisa);
         secondMemory.memoryTwoPartOne();
         secondMemory.memoryTwoPartTwo();
 
@@ -54,7 +54,7 @@ public class Program {
         student.stopForAWhile("минута", "перевести дух");
 
         student.readyForThirdMemory(student.getStatus());
-        thirdMemory.memoryBegins(student.getStatus(), student.getConviction());
+        thirdMemory.memoryBegins(student, student.getConviction());
         thirdMemory.memoryThree();
 
         student.crossOverBy(Place.FERRY, Place.RIVER);
@@ -63,7 +63,7 @@ public class Program {
         dawn.shineLikeStripOnWest();
 
         student.readyForFourthMemory(dawn.getIsOccured(), student.getPlace() == Place.MOUNTAIN);
-        fourthMemory.memoryBegins(student.getStatus(), student.getProgress());
+        fourthMemory.memoryBegins(student, student.getProgress());
         fourthMemory.memoryFour();
 
         allFeelings.happen();

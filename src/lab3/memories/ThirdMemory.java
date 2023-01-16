@@ -9,12 +9,11 @@ public class ThirdMemory implements AbleToBegin {
         this.name = name;
     }
 
-    Student student = new Student("Студент", "", 0.0);
+    Student student = new Student("Студент", "ready", 0.0);
 
-    public void memoryBegins(String studentStatus, String studentConviction) {
-        String status = "ready";
+    public void memoryBegins(Object otherStudent, Object studentConviction) {
         String convictionOfStudent = student.getConviction();
-        if (studentStatus.equals(status) && convictionOfStudent.equals(studentConviction)) {
+        if (student.equals(otherStudent) && convictionOfStudent.equals(studentConviction)) {
             System.out.println(name + " начинается");
         } else {
             System.out.println(name + " ещё невозможно");

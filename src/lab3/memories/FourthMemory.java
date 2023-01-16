@@ -6,11 +6,10 @@ import lab3.people.Student;
 public class FourthMemory implements AbleToBegin{
 
     private String name;
-    Student student = new Student("Студент", "");
-    public void memoryBegins(String studentStatus, String studentProgress) {
-        String status = "ready";
+    Student student = new Student("Студент", "ready");
+    public void memoryBegins(Object otherStudent, Object studentProgress) {
         String progress = "Первое, второе, третье воспоминания восстановлены";
-        if (status.equals(studentStatus) && progress.equals(studentProgress)) {
+        if (student.equals(otherStudent) && progress.equals(studentProgress)) {
             System.out.println(name + " начинается");
         }
         else {
