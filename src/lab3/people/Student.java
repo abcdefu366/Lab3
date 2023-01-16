@@ -53,7 +53,7 @@ public class Student extends Person implements AbleToThink {
     }
 
     public void readyForFirstMemory(boolean firstCondition, boolean secondCondition, boolean thirdCondition) {
-        if (firstCondition == true & secondCondition == true & thirdCondition == true) {
+        if (firstCondition && secondCondition && thirdCondition) {
             System.out.println(getName() + " готов к первому воспоминанию");
             setStatus("ready");
         } else {
@@ -79,8 +79,8 @@ public class Student extends Person implements AbleToThink {
     public Student(String name) {
         super(name);
     }
-    public void readyForSecondMemory(boolean condition, String fireStatus) {
-        if (condition == true & fireStatus == "lonely") {
+    public void readyForSecondMemory(boolean condition, boolean isFireLonely) {
+        if (condition && isFireLonely) {
             System.out.println(getName() + " готов ко второму воспоминанию");
             setStatus("ready");
             setProgress(getProgress() + "Первое");
@@ -138,6 +138,7 @@ public class Student extends Person implements AbleToThink {
 
     public void suddenlyFellHappy() {
         System.out.println("Радость вдруг заволновалась в " + soul);
+        setStatus("happy");
     }
 
     public void stopForAWhile(String time, String reason) {
@@ -147,7 +148,8 @@ public class Student extends Person implements AbleToThink {
     }
 
     public void readyForThirdMemory(String studentStatus) {
-        if (studentStatus == "rested") {
+        String anotherStatus = "rested";
+        if (anotherStatus.equals(studentStatus)) {
             System.out.println(getName() + " готов к третьему воспоминанию");
             setStatus("ready");
             setConviction(0.0);
@@ -187,7 +189,7 @@ public class Student extends Person implements AbleToThink {
     }
 
     public void readyForFourthMemory(boolean firstCondition, boolean secondCondition) {
-        if (firstCondition == true & secondCondition == true) {
+        if (firstCondition && secondCondition) {
             System.out.println(getName() + " готов к четвёртому воспоминанию");
             setStatus("ready");
             setProgress(getProgress() + ", третье воспоминания восстановлены");

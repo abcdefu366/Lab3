@@ -15,7 +15,8 @@ public class Program {
 
         Vasilisa vasilisa = new Vasilisa("Василиса", "");
         FirstMemory firstMemory = new FirstMemory("Первое воспоминание");
-        Fire fire = new Fire("Одинокий огонь", "", false);
+        Fire fire = new Fire("огонь", "", false);
+        Fire otherFire = new Fire("Одинокий огонь", "lonely", true);
         SecondMemory secondMemory = new SecondMemory("Второе воспоминание");
         ThirdMemory thirdMemory = new ThirdMemory("Третье воспоминание");
         Dawn dawn = new Dawn("заря", false,"Холодная багровая ");
@@ -44,7 +45,7 @@ public class Program {
         fire.quietlyBlinkedInTheDark();
         fire.becameUnsociable();
 
-        student.readyForSecondMemory(fire.getIsOccured(), fire.getStatus());
+        student.readyForSecondMemory(fire.getIsOccured(), otherFire.equals(fire));
         vasilisa.readyToBeRemembered();
         secondMemory.memoryBegins(student, vasilisa);
         secondMemory.memoryTwoPartOne();

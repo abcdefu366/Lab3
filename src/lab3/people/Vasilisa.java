@@ -47,9 +47,6 @@ public class Vasilisa extends Character {
     public void cryForTheReason(String s) {
         System.out.println(getName() + " плакала из-за того, что: " + s);
     }
-    public String getStatus() {
-        return status;
-    }
     public Vasilisa(String name, String status) {
         super(name);
         this.status = status;

@@ -1,6 +1,7 @@
 package lab3.enviromentState;
 
 import classes.StateOfNature;
+import lab3.people.Student;
 
 public class Fire extends StateOfNature {
 
@@ -27,6 +28,7 @@ public class Fire extends StateOfNature {
         }
         System.out.println(people + " покинули " + getName());
         status = "lonely";
+        setName("Одинокий огонь");
         setIsOccured(true);
         System.out.println();
     }
@@ -34,7 +36,10 @@ public class Fire extends StateOfNature {
         super(name, isOccured);
         this.status = status;
     }
-    public String getStatus() {
-        return status;
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Fire)) return false;
+        Fire other = (Fire) obj;
+        return other.status == status && other.getName() == getName();
     }
 }
