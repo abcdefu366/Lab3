@@ -20,7 +20,7 @@ public class Vasilisa extends Character {
     }
     Student student = new Student("Студент");
     public void readyToBeRemembered() {
-        double a = Math.random();
+        double a = 1;
         double b = Math.random();
         int delay = 1000;
         while (a > b) {

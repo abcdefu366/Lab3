@@ -15,7 +15,7 @@ public class Program {
 
         Vasilisa vasilisa = new Vasilisa("Василиса", "");
         FirstMemory firstMemory = new FirstMemory("Первое воспоминание");
-        Fire fire = new Fire("огонь", "", false);
+        Fire fire = new Fire("Огонь", "", false);
         Fire otherFire = new Fire("Одинокий огонь", "lonely", true);
         SecondMemory secondMemory = new SecondMemory("Второе воспоминание");
         ThirdMemory thirdMemory = new ThirdMemory("Третье воспоминание");
