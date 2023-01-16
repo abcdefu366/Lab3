@@ -42,6 +42,5 @@ public class AllFeelings {
         feelingOfPower.takePossessionOfStudent("","Чувство силы", student.getName(), degree);
         feelingOfAnticipation.takePossessionOfStudent("Невыразимое сладкое ", "Чувство ожидания", student.getName(), degree);
         feelingOfHappiness.takePossessionOfStudent("Неведомое, таинственное ", "Чувство счастья", student.getName(), degree);
-
     }
 }
